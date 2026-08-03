@@ -1,0 +1,741 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JONO - Fashion Landing Page</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts for a similar look to Satoshi if not available, otherwise assume Satoshi is loaded via custom CSS -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'juno-brown': '#978877',
+            'juno-gray': '#F5F5F5',
+            'juno-black': '#101010',
+            'juno-white': '#FFFFFF',
+          },
+          fontFamily: {
+            'satoshi': ['Satoshi', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-typography">
+    @font-face {
+      font-family: 'Satoshi';
+      src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3S6YOR6SK6J7Z5SZGYBCU7VY/7W6S3XCH3W6S3XCH3W6S3XCH.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      font-family: 'Satoshi', sans-serif;
+      background-color: #ffffff;
+      color: #101010;
+    }
+    .hero-mask {
+      border-radius: 40px;
+      overflow: hidden;
+    }
+  </style>
+<style data-purpose="layout-styles">
+    .container-custom {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .nav-link {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .btn-outline {
+      border: 1px solid #101010;
+      padding: 0.5rem 1.5rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+    .btn-outline:hover {
+      background-color: #101010;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body class="bg-white">
+<!-- BEGIN: Navigation -->
+<header class="w-full bg-white py-6">
+<div class="container-custom flex items-center justify-between">
+<nav class="flex items-center space-x-6">
+<a class="nav-link" href="code.html">HOME</a>
+<div class="relative group">
+<a href="collection.html" class="nav-link flex items-center">SHOP <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+</div>
+<a class="nav-link" href="about.html">ABOUT</a>
+<a class="nav-link" href="contact.html">CONTACT</a>
+</nav>
+<a href="code.html" class="text-2xl font-bold tracking-widest flex items-center gap-2">
+<span class="flex items-center justify-center border border-black rounded-full w-6 h-6 text-[10px]">J</span>
+        JONO
+      </a>
+<div class="flex items-center space-x-6">
+<button onclick="openSearch()" aria-label="Search" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button onclick="openNotifications()" aria-label="Notifications" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+          MY CART <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFP9qT613jQrg3p8wtj9S0KpnV85nu28ng9ibnCFpZOfwZwk58Esj2jQBKD0RECCYzfYJgIIz6w3En1-EZH47rqJTEvrJ1Tp_Bzy1VdvO5qYPNnfMIctzL-R857_d-jJj2G7PQkkMVzGhd6pOChL__O_Y-0r3WzQhcuFmgCoePHE8OTXn_VSBLUOHdLrSMMvIEXo12LRCuQUD1CdcEpkYVw7ZUCJC4GVYjDUwYTIRu22p6WLMzsWvV">
+</div>
+</div>
+</div>
+</header>
+<!-- END: Navigation -->
+<!-- BEGIN: Hero Section -->
+<section class="container-custom py-4">
+<div class="relative w-full h-[600px] hero-mask">
+<!-- Background Image -->
+<img alt="Hero Image" class="w-full h-full object-cover object-top brightness-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBC8UMQVHdWfC2IPJ6Gw6R44g5dsMpi_wt5O_kerV3uxamnRruc10p92g6Ry8vOQg_UKwMorDwbAZgSoMQMnSNFxNFlfaq1TBWa_qfTdBe6hQk9j3Varajmv7IC-bCKIXjt48iEJkaEnuh7ey2rPiV6W8A-ktzviiDrEPM6uiTWy78eZb0OqQ_o5Cgyp7QnRmw1ZGVj-88rxlD-eBLdpxT3DZnhS0SYCmEcPLx2csMsDAaINubN4ooLXv7V-AS113ScpB3Z5mv4Z2Hjag">
+<!-- Overlay Content -->
+<div class="absolute inset-0 flex flex-col justify-center px-16 pointer-events-none">
+<div class="max-w-xl pointer-events-auto">
+<h1 class="text-white text-6xl font-bold leading-tight mb-4">SHAPING A NEW<br>ERA OF STYLE AND<br>SOPHISTICATION</h1>
+<p class="text-white/80 text-sm mb-8 max-w-sm">Elevate your wardrobe and embrace your unique elegance with every click.</p>
+<a href="collection.html" class="px-6 py-3 border border-white text-white rounded-full inline-flex items-center gap-2 hover:bg-white hover:text-black transition-colors">
+            SEE COLLECTION <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+<!-- Scroll/Interactive Icon -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2">
+<div class="w-8 h-12 border-2 border-white/50 rounded-full flex items-center justify-center">
+<div class="w-1 h-2 bg-white rounded-full animate-bounce"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Intro Text -->
+<section class="container-custom py-20 text-center">
+<div class="max-w-4xl mx-auto">
+<p class="text-2xl leading-relaxed text-juno-black font-medium">
+        Find the latest styles, classic favorites,         and also the modern and comfortable fashion. Get ready to look and feel amazing in every click with <span class="font-bold">JONO</span>. So, happy shopping!
+      </p>
+<div class="mt-8 border-b border-gray-200 w-32 mx-auto"></div>
+</div>
+</section>
+<!-- END: Intro Text -->
+<!-- BEGIN: Featured Products -->
+<section class="container-custom py-12">
+<div class="flex justify-between items-end mb-12">
+<a href="collection.html" class="text-3xl font-bold uppercase tracking-tight hover:text-juno-brown transition-colors">FEATURED PRODUCT</a>
+<div class="flex gap-2">
+<button onclick="filterProducts('all')" id="btn-all" class="px-4 py-1.5 text-xs bg-black text-white rounded-full">ALL</button>
+<button onclick="filterProducts('new')" id="btn-new" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">NEW ARRIVAL</button>
+<button onclick="filterProducts('best')" id="btn-best" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">BEST SELLER</button>
+<button onclick="filterProducts('rec')" id="btn-rec" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">RECOMMENDATION FOR YOU</button>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div data-purpose="product-card" data-category="new">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4 relative group">
+<img alt="Utility Jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc3mPo77TEIR7jigrxGpvlV1mfJN33ByMzd7BNKmZeHiUethrbMRn42rbfj1rxf8cf8HgFt3Wgn16_mKHIY9T4WC9tNqTqk96LWzbxVLHU8s2Y4J8zZK2GAt3tPkrEkVN9GP8H0TFweaUqCjtzfNROW6ne8fFbr4whglDbfeWIedhTppFDwNaM0bNZwsNE83XC3PuD8_8odrl7HOrsP2ZlD25sbVQUZ_JIy8LIqh5doI_A91w35iXjtrNaS4nVbmpOv_twakzv5N01Ww">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button onclick="toggleWishlist('Utility Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="quickView('Utility Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="addToCart('Utility Jacket', 350)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-sm font-bold uppercase">UTILITY JACKET</h3>
+<span class="text-sm font-medium">$350</span>
+</div>
+<div class="flex gap-1.5 mb-3">
+<div class="w-4 h-4 rounded-full bg-[#978877] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#3B5461] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#9F2F2F] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+</div>
+<button onclick="addToCart('Utility Jacket', 350)" class="w-full text-xs font-bold border border-black rounded-full py-2 flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+</button>
+</div>
+<!-- Product 2 -->
+<div data-purpose="product-card" data-category="best">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4 relative group">
+<img alt="Miracle Air Shirt Jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQtz128u-Cf8BOmSI5xTsIzavBpXmGSEVsKkTNYG42bdAz8TldKTn1NQHgh9pwP3K4pNkz8E6J5m7rbC6Lq58IX6TNZhJY_XuHKFO04cS5gKCHBb_XdEaRGzUBbdK14f4XmjymH79JMetfwneNHyadlMbICrwAQEOwmIJdQ-gXggv5IGTiXDkvtdIkmKKhfjWf2AbE8QoLmBdRwEafWdMzRVi-5UbgkVilOlNCwgbWbzMH9PkIcNeGUK97wchKc6P8droVHNgU032mYg">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button onclick="toggleWishlist('Miracle Air Shirt Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="quickView('Miracle Air Shirt Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="addToCart('Miracle Air Shirt Jacket', 100)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-sm font-bold uppercase">MIRACLE AIR SHIRT JACKET</h3>
+<span class="text-sm font-medium">$100</span>
+</div>
+<div class="flex gap-1.5 mb-3">
+<div class="w-4 h-4 rounded-full bg-[#101010] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#3D5276] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#A5C1CF] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+</div>
+<button onclick="addToCart('Miracle Air Shirt Jacket', 100)" class="w-full text-xs font-bold border border-black rounded-full py-2 flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+</button>
+</div>
+<!-- Product 3 -->
+<div data-purpose="product-card" data-category="rec">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4 relative group">
+<img alt="Tailored Rilex Jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTbVp6TR5MDJi6JHStMxFKQMzQ8DSggG-iJOJ79iLqf2QbliE-aVyw2HY4FzM5OMzB_2ZxbN96TYfLIw1spJRu0btwflthlBleqxYY57uDQigbYz5-CTerV4x2HzKpmJ15g6McsQ1ZFQieF6c2yxolLAejAGUOoQD902NA3Zw8u0VzZE13XK3VYMUnLF2RvjM2ea9x0FgcRwAmbKPnxura8s_ZVJQCJKua2FpVyQJgcOrgTiXDGlf4kJIU0mwEF2Wql9MtvtayjMw_zw">
+<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button onclick="toggleWishlist('Tailored Rilex Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="quickView('Tailored Rilex Jacket')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="addToCart('Tailored Rilex Jacket', 275)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+</div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="text-sm font-bold uppercase">TAILORED RILEX JACKET</h3>
+<span class="text-sm font-medium">$275</span>
+</div>
+<div class="flex gap-1.5 mb-3">
+<div class="w-4 h-4 rounded-full bg-[#314F44] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#829E9A] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+<div class="w-4 h-4 rounded-full bg-[#D8CEC5] cursor-pointer hover:ring-2 hover:ring-offset-1 hover:ring-black"></div>
+</div>
+<button onclick="addToCart('Tailored Rilex Jacket', 275)" class="w-full text-xs font-bold border border-black rounded-full py-2 flex items-center justify-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+</button>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a href="collection.html" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 mx-auto hover:bg-black hover:text-white transition-colors">
+        SEE MORE PRODUCT <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</section>
+<!-- END: Featured Products -->
+<!-- BEGIN: Collection Highlight -->
+<section class="container-custom py-16">
+<div class="bg-[#C4B6AA] rounded-[40px] p-12 relative overflow-hidden flex flex-col items-center">
+<div class="flex justify-between w-full mb-10">
+<a href="collection.html" class="text-3xl font-bold uppercase max-w-md leading-tight hover:text-white/80 transition-colors">ELEVATE YOUR STYLE WITH OUR NEW COLLECTION</a>
+<p class="text-sm max-w-xs text-black/70">Get ready to look amazing with our latest fashion collection; we've got everything you need to refresh your wardrobe and boost your style, simple, affordable, and perfect for every occasion.</p>
+</div>
+<div class="relative w-full aspect-[21/9] rounded-3xl overflow-hidden">
+<img alt="Collection Video Thumbnail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ymWMfE8agfMK81r4MRVQCjUnLTWjoUTCY9RQPu-KQloGTEysbELfexbYzLBqc2c9Se01a94EFeT2jY_qql8kaBvin3DPcTos-oi7W7G3IQmHCPxP1LAfAlnW52hIpYPbBj2mlrypk9j7xmtyqR1SyjqNW4sNaJzItoce6vWJx-YnYK6eZcZpldVgqDMEyoDpLHKdnzJ7c5SZKLHC5-oG9VTEicXmx9OJ0r2J16tfqTmxoEqeExK_">
+<div class="absolute inset-0 flex items-center justify-center">
+<button onclick="playVideo()" class="w-16 h-16 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center border border-white/30 hover:bg-white/40 transition-colors">
+<svg class="w-6 h-6 text-white fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
+</button>
+</div>
+</div>
+<div class="mt-10">
+<a href="collection.html" class="btn-outline flex items-center gap-2 border-black inline-flex">
+          SEE OUR NEW COLLECTION <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</div>
+</section>
+<!-- END: Collection Highlight -->
+<!-- BEGIN: Top Categories -->
+<section class="container-custom py-16">
+<a href="collection.html" class="text-3xl font-bold text-center uppercase mb-16 tracking-tight block hover:text-juno-brown transition-colors">TOP FASHION CATEGORY</a>
+<div class="flex justify-center gap-6 overflow-hidden">
+<!-- Cat 1 -->
+<div class="flex-shrink-0 w-[240px]">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/5] mb-4">
+<img alt="T-Shirt" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCboFkBP0t_h6SzKEbIsahoyr7KdmV1gR196yu75JrRrS2_zurtJdVTrdCAFajNhQxGcMiz_UCGRxnslkbPQrxcL9rESkNNFBZRAHaX1YUkzRNc2ITNOncz5YpGXrL0W0B5QrPmw_bponeRS8-P_wLijhDrrlAa_i1e4DJyirVPxBr2A7OLdvS4ZOOOPnLhN0DxT4XG2w3sk1oycKeTopi5_emK0r7yM3J3UpX27it1aaCgJgt3zq6XJ-p1bFPW6i0NcfGBWN2Hp4zkag">
+</div>
+<p class="text-center text-xs font-bold uppercase text-gray-500">T-SHIRT</p>
+</div>
+<!-- Cat 2 -->
+<div class="flex-shrink-0 w-[280px]">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/5] mb-4">
+<img alt="Blouse &amp; Tops" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuw9-XFq-uAI05KGT2gKMXXDL7xWPjbk19bb13KJBZ2fUOrPpZKXEW480NH7c6J15VC1KZF8DVSdJsTRO0caD7MvTZSjlktw_-4ltScjl-at-DxkgGW829ehU1M1QgZca5Wy8U-X33IVnc2u4_WH5WS6gQlcSbfJ-safNk4aJYSdxRtGeW8OcAPse1D7y5R5GwgkelYTHyxfIpnb_XOaAgy258CSFqkOc9Oak6VAUd_xLhmJfZxNVYksOe3yo1VmeZisz3_URZSbV69g">
+</div>
+<p class="text-center text-xs font-bold uppercase">BLOUSE &amp; TOPS</p>
+</div>
+<!-- Cat 3 -->
+<div class="flex-shrink-0 w-[320px] -mt-8">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/5] mb-4 border-4 border-white shadow-xl">
+<img alt="Jackets &amp; Coats" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3u___Pb3kLj7Ac3_jfjOunZ1WzXyBJPVWGppglR5k0dzT-6gawRhYQ9JxabyV6Gg1fAqILKE7WnMWkaBHK4djhY45ESMRia_4hNyBHwcQx8-ypIKeH1wCBVxU5hKZhU_9w3yGfbZ06Cb9IMEbY-5pcV7tyi1oCyGtq2TXbIOb3rrtJAEAPUQxOgHSSjJN7INtsQiArNlbLey9TtYY22R2KAeiZNor_hZg8yCXdsRqrJjm3Ky5TpqcOE752eCONmS3k8h3LVr6UmBeYw">
+</div>
+<p class="text-center text-xs font-bold uppercase">JACKETS &amp; COATS</p>
+</div>
+<!-- Cat 4 -->
+<div class="flex-shrink-0 w-[280px]">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/5] mb-4">
+<img alt="Dresses" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi0wke6CkC_6EwixxGrHWJztOutRBmjE_sQJKYw7dSiDBdfXY8RXNukVr8CT6vAtoKCBkjqBX3BtRtjcLsyqNl3UE1FqgwnTBDVFo_RZtUZ6ZUTMksE7YFk3cs6iX6dBQ8jXMU_gvcoDxri0TvmXVlcLVS6nRvRWz6mi3U13o0C07IS5BYrSrUIBSHVKxQ0WvKxsZPsvv69_bJHtLy7-msL7UWMrkAy7ZQnOohpdKDIKmo5MJvhacesJCeaDr-OMKJKhIp70Zx25dYCg">
+</div>
+<p class="text-center text-xs font-bold uppercase">DRESSES</p>
+</div>
+<!-- Cat 5 -->
+<div class="flex-shrink-0 w-[240px]">
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/5] mb-4">
+<img alt="T-Shirt" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDx-3U8iQiK_7aLHf1uLv0LoZxi4G2DyQdQjDyxR31fqf5SEXE7K3XkQbdLVo1OdN4AOzvCt-zzDcDRFisl85c9aptMCgvLY2Ywfh2UDXTTD_qNI5RO12nC8R1HYcwkx25Gy14zPP74_zcMdKiH3jSWPlXVMtLYzFaVzgOQcI2l_REAqbbHyiSW2u4c1ItG4kUXlGEfbW2LyhHBhoFxKBnaxHCJMy67XGpYjmo8bbtACHcsTHJGwzY0rnAYrQWjzjY47k1AhdyxyRU5Hg">
+</div>
+<p class="text-center text-xs font-bold uppercase text-gray-500">T-SHIRT</p>
+</div>
+</div>
+<div class="mt-12 text-center">
+<a href="collection.html" class="px-8 py-2 border border-gray-200 rounded-full text-xs font-bold flex items-center gap-2 mx-auto inline-flex">
+        SEE MORE <svg class="w-3 h-3 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+</section>
+<!-- END: Top Categories -->
+<!-- BEGIN: Shop The Look -->
+<section class="container-custom py-20 flex gap-16 items-start">
+<!-- Left Main Look -->
+<div class="w-1/2 relative">
+<div class="bg-juno-gray rounded-[40px] overflow-hidden aspect-[4/5]">
+<img alt="Full Look" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQkPWIrwgahIh9yAGgqTXa7Atw8qgPFEIK1ThMzSmvAMOZEDepK58EfX9E6M181ohIn7xyimHmOHqMg295-SRFUgSDjn8qNOWTNSa64WJxEO-nUHju7DDgRltK4Lv5ej5APw223mbUhtp-PPyTCztDiVP_AH3YY4sEQglZlrr437NTIzN-tr_3oXF-SWw6MJ2kf3uhG3kUO5D7UKJ84Ibw7jW-t3vn-kf1b2ONY2M1GhwfjmWVT2fOFKDUrREfj_ckBYLSVepfduIX8A">
+</div>
+<!-- Carousel Arrows -->
+<button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/50 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/80 transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/50 backdrop-blur rounded-full flex items-center justify-center hover:bg-white/80 transition-colors">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<!-- Right Items Details -->
+<div class="w-1/2 pt-10">
+<a href="collection.html" class="text-2xl font-bold uppercase mb-10 tracking-widest block hover:text-juno-brown transition-colors">ITEM IN THIS LOOK</a>
+<div class="space-y-12">
+<!-- Item 1 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-28 bg-juno-gray rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Puffer Jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_A3D0X-ja6k6bFf-RUILUqm7PRcKWXMnqml100bsFQgg8NP8V9YWEyUFT_v938l0Lo7Y8X7jQ6tZvUbpoWYciyxkMnpxEi6IH8SNMQdBQTdKkSpbTF-kNANYKyFVtsm79CV8sAfRAgd7Sx7vNZdC80awCAGcMaQ6TzPN0GasQzo-pcfiqq0vzFecKbo4ybtYVeztxeUmtywoENwcqpqkESoZ_5OreTG8r0WVr0gdd_9d0pjSssX9Rg7vsd4Bhn2VgjpNrdFuR5ywIDQ">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between mb-1">
+<h4 class="text-xs font-bold uppercase">SILHOUETTE PUFFER JACKET</h4>
+<span class="text-xs font-bold">$230</span>
+</div>
+<div class="flex gap-1.5 mb-4">
+<div class="w-3 h-3 rounded-full bg-[#101010]"></div>
+<div class="w-3 h-3 rounded-full bg-[#978877]"></div>
+<div class="w-3 h-3 rounded-full bg-[#F5F5F5] border border-gray-200"></div>
+</div>
+<button onclick="addToCart('Silhouette Puffer Jacket', 230)" class="text-[10px] font-bold border border-black rounded-full px-4 py-1.5 flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+            </button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-28 bg-juno-gray rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Midi Dress" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpwMCsFFEKMKYQAkHCZffErfm-6xYbdEI11KW6AAMYrxtj8_DxdxiqUAUaf5yncechmlLUEbbLdQ2ybaVT8KfgqbjbNQCPmH_M_jynX5iset7U08ik1xa370w1OSZTp9mM36Q-zIahRC9R_kDMQ0spSeex6Wg2rSntT4A-tLJyQ0l66cuyOo4_r7uaLaS5kMyU1R4vnLRFJ6eAGhSawRWTFmsM1p6meSRk5VwCK2DpPvYoR3xP5Y0pyjuUZEUu651c2GQ7lG3AcRz0hA">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between mb-1">
+<h4 class="text-xs font-bold uppercase">CRYSTAL MIDI DRESS</h4>
+<span class="text-xs font-bold">$175</span>
+</div>
+<div class="flex gap-1.5 mb-4">
+<div class="w-3 h-3 rounded-full bg-[#101010]"></div>
+<div class="w-3 h-3 rounded-full bg-[#334631]"></div>
+<div class="w-3 h-3 rounded-full bg-[#4A3228]"></div>
+</div>
+<button onclick="addToCart('Crystal Midi Dress', 175)" class="text-[10px] font-bold border border-black rounded-full px-4 py-1.5 flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+            </button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex gap-6 items-center">
+<div class="w-24 h-28 bg-juno-gray rounded-2xl overflow-hidden flex-shrink-0">
+<img alt="Ankle Boots" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZHUkS6MKX7lu7pepH6t2okts6J-olqBwFPQ1NZKLjZ9sRuJFw1N9idrs3VWze5pGdQ2WoeqHQUnB-KNL3-vk8OLInr4DHlS3Vv0sw-n3BKad4DwLHXAr81oPvm5g7CjdLu9nnfgvrvk_m2ixts5x2PtGeuVG90ioQGeiqm9hODu5asg0cGz9THWgNxDQYhgUBt8P9Lh4Dd8KFn36kT3_s1hVFSVcAqu69gaHPFivBviAS3jmKYyN7HRVZEHNuTsafIQjOr18eRjeXOw">
+</div>
+<div class="flex-grow">
+<div class="flex justify-between mb-1">
+<h4 class="text-xs font-bold uppercase">ALIA ANKLE BOOTS</h4>
+<span class="text-xs font-bold">$1200</span>
+</div>
+<div class="flex gap-1.5 mb-4">
+<div class="w-3 h-3 rounded-full bg-[#101010]"></div>
+<div class="w-3 h-3 rounded-full bg-[#8E7970]"></div>
+</div>
+<button onclick="addToCart('Alia Ankle Boots', 1200)" class="text-[10px] font-bold border border-black rounded-full px-4 py-1.5 flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg> ADD TO CART
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Shop The Look -->
+<!-- BEGIN: Footer -->
+<footer class="bg-juno-black text-white relative mt-20 pt-24 pb-12 overflow-hidden">
+<!-- Huge Background Brand Text -->
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none opacity-10 select-none">
+<span class="text-[25vw] font-bold leading-none tracking-tighter">JONO</span>
+</div>
+<div class="container-custom relative z-10">
+<!-- Call to Action -->
+<div class="text-center mb-24">
+<a href="collection.html" class="text-4xl font-bold uppercase mb-4 block hover:text-white/80 transition-colors">EXPLORE OUR FASHION CATALOG</a>
+<p class="text-white/60 text-sm max-w-lg mx-auto mb-8">Browse through our fashion catalog to find a wide range of stylish clothing options. From classic looks to the latest trends, there's something for everyone.</p>
+<a href="collection.html" class="px-8 py-3 border border-white rounded-full text-xs font-bold flex items-center gap-2 mx-auto hover:bg-white hover:text-black transition-all inline-flex">
+          SEE OUR INSTAGRAM <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-4 gap-12 border-t border-white/10 pt-16">
+<div data-purpose="footer-column">
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">GENERAL</h5>
+<ul class="space-y-3 text-sm">
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">About Us</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Blog</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">How It Works</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div data-purpose="footer-column">
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">PRODUCTS</h5>
+<ul class="space-y-3 text-sm">
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Man Fashion</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Woman Fashion</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Shoes &amp; Bag</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<div data-purpose="footer-column">
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">CUSTOMER SERVICE</h5>
+<ul class="space-y-3 text-sm">
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">FAQ</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Help &amp; Support</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Billing Cycle</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div data-purpose="footer-column">
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">SOCIAL MEDIA</h5>
+<ul class="space-y-3 text-sm">
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Instagram</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Tiktok</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Facebook</a></li>
+<li class=""><a class="hover:text-juno-brown transition-colors" href="#">Youtube</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- Search Modal -->
+<div id="searchModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-2xl mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">Search</h3>
+<button onclick="closeSearch()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="flex gap-2 mb-4">
+<input type="text" id="searchInput" class="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-black" placeholder="Search for products..." onkeyup="handleSearch(event)">
+<button onclick="performSearch()" class="px-6 py-3 bg-black text-white rounded-lg font-bold">SEARCH</button>
+</div>
+<div class="flex gap-2 mb-4">
+<button onclick="filterSearch('all')" id="search-all" class="px-4 py-2 bg-black text-white rounded-full text-xs">ALL</button>
+<button onclick="filterSearch('men')" id="search-men" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MEN</button>
+<button onclick="filterSearch('women')" id="search-women" class="px-4 py-2 border border-gray-200 rounded-full text-xs">WOMEN</button>
+<button onclick="filterSearch('accessories')" id="search-accessories" class="px-4 py-2 border border-gray-200 rounded-full text-xs">ACCESSORIES</button>
+</div>
+<div id="searchResults" class="max-h-64 overflow-y-auto"></div>
+</div>
+</div>
+
+<!-- Notification Modal -->
+<div id="notificationModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-md mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">Notifications</h3>
+<button onclick="closeNotifications()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">New Collection Available!</p>
+<p class="text-xs text-gray-500">Check out our latest arrivals</p>
+</div>
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">50% Off Sale</p>
+<p class="text-xs text-gray-500">Limited time offer on selected items</p>
+</div>
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">Order Shipped</p>
+<p class="text-xs text-gray-500">Your order is on the way</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-md mx-4 max-h-[80vh] overflow-y-auto">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">My Cart</h3>
+<button onclick="closeCart()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div id="cartItems" class="space-y-4">
+<p class="text-gray-500 text-center py-8">Your cart is empty</p>
+</div>
+<div id="cartTotal" class="border-t mt-4 pt-4 hidden">
+<div class="flex justify-between font-bold">
+<span>Total:</span>
+<span id="totalAmount">$0</span>
+</div>
+<button onclick="checkout()" class="w-full mt-4 py-3 bg-black text-white rounded-full font-bold hover:bg-gray-800 transition-colors">CHECKOUT</button>
+</div>
+</div>
+</div>
+
+<script>
+let cart = [];
+
+function openSearch() {
+  document.getElementById('searchModal').classList.remove('hidden');
+  document.getElementById('searchModal').classList.add('flex');
+  document.getElementById('searchInput').focus();
+}
+
+function closeSearch() {
+  document.getElementById('searchModal').classList.add('hidden');
+  document.getElementById('searchModal').classList.remove('flex');
+}
+
+function openNotifications() {
+  document.getElementById('notificationModal').classList.remove('hidden');
+  document.getElementById('notificationModal').classList.add('flex');
+}
+
+function closeNotifications() {
+  document.getElementById('notificationModal').classList.add('hidden');
+  document.getElementById('notificationModal').classList.remove('flex');
+}
+
+function openCart() {
+  document.getElementById('cartModal').classList.remove('hidden');
+  document.getElementById('cartModal').classList.add('flex');
+  updateCartDisplay();
+}
+
+function closeCart() {
+  document.getElementById('cartModal').classList.add('hidden');
+  document.getElementById('cartModal').classList.remove('flex');
+}
+
+function updateCartDisplay() {
+  const cartItems = document.getElementById('cartItems');
+  const cartTotal = document.getElementById('cartTotal');
+  const totalAmount = document.getElementById('totalAmount');
+  
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
+    cartTotal.classList.add('hidden');
+  } else {
+    let html = '';
+    let total = 0;
+    cart.forEach((item, index) => {
+      total += item.price;
+      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">$' + item.price + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
+    });
+    cartItems.innerHTML = html;
+    totalAmount.textContent = '$' + total;
+    cartTotal.classList.remove('hidden');
+  }
+}
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  updateCartCount();
+  alert(name + ' added to cart!');
+}
+
+function toggleWishlist(name) {
+  alert(name + ' added to wishlist!');
+}
+
+function quickView(name) {
+  alert('Quick view: ' + name);
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+  } else {
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    alert('Proceeding to checkout! Total: $' + total + '\nThank you for shopping with JONO!');
+    cart = [];
+    updateCartCount();
+    updateCartDisplay();
+    closeCart();
+  }
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartCount();
+  updateCartDisplay();
+}
+
+function updateCartCount() {
+  const cartBtn = document.querySelector('.btn-outline');
+  cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
+}
+
+let searchCategory = 'all';
+
+const products = [
+  { name: 'UTILITY JACKET', price: 350, category: 'new', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCc3mPo77TEIR7jigrxGpvlV1mfJN33ByMzd7BNKmZeHiUethrbMRn42rbfj1rxf8cf8HgFt3Wgn16_mKHIY9T4WC9tNqTqk96LWzbxVLHU8s2Y4J8zZK2GAt3tPkrEkVN9GP8H0TFweaUqCjtzfNROW6ne8fFbr4whglDbfeWIedhTppFDwNaM0bNZwsNE83XC3PuD8_8odrl7HOrsP2ZlD25sbVQUZ_JIy8LIqh5doI_A91w35iXjtrNaS4nVbmpOv_twakzv5N01Ww' },
+  { name: 'MIRACLE AIR SHIRT JACKET', price: 100, category: 'best', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQtz128u-Cf8BOmSI5xTsIzavBpXmGSEVsKkTNYG42bdAz8TldKTn1NQHgh9pwP3K4pNkz8E6J5m7rbC6Lq58IX6TNZhJY_XuHKFO04cS5gKCHBb_XdEaRGzUBbdK14f4XmjymH79JMetfwneNHyadlMbICrwAQEOwmIJdQ-gXggv5IGTiXDkvtdIkmKKhfjWf2AbE8QoLmBdRwEafWdMzRVi-5UbgkVilOlNCwgbWbzMH9PkIcNeGUK97wchKc6P8droVHNgU032mYg' },
+  { name: 'TAILORED RILEX JACKET', price: 275, category: 'rec', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCTbVp6TR5MDJi6JHStMxFKQMzQ8DSggG-iJOJ79iLqf2QbliE-aVyw2HY4FzM5OMzB_2ZxbN96TYfLIw1spJRu0btwflthlBleqxYY57uDQigbYz5-CTerV4x2HzKpmJ15g6McsQ1ZFQieF6c2yxolLAejAGUOoQD902NA3Zw8u0VzZE13XK3VYMUnLF2RvjM2ea9x0FgcRwAmbKPnxura8s_ZVJQCJKua2FpVyQJgcOrgTiXDGlf4kJIU0mwEF2Wql9MtvtayjMw_zw' },
+  { name: 'SILHOUETTE PUFFER JACKET', price: 230, category: 'new', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC_A3D0X-ja6k6bFf-RUILUqm7PRcKWXMnqml100bsFQgg8NP8V9YWEyUFT_v938l0Lo7Y8X7jQ6tZvUbpoWYciyxkMnpxEi6IH8SNMQdBQTdKkSpbTF-kNANYKyFVtsm79CV8sAfRAgd7Sx7vNZdC80awCAGcMaQ6TzPN0GasQzo-pcfiqq0vzFecKbo4ybtYVeztxeUmtywoENwcqpqkESoZ_5OreTG8r0WVr0gdd_9d0pjSssX9Rg7vsd4Bhn2VgjpNrdFuR5ywIDQ' },
+  { name: 'CRYSTAL MIDI DRESS', price: 175, category: 'women', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDpwMCsFFEKMKYQAkHCZffErfm-6xYbdEI11KW6AAMYrxtj8_DxdxiqUAUaf5yncechmlLUEbbLdQ2ybaVT8KfgqbjbNQCPmH_M_jynX5iset7U08ik1xa370w1OSZTp9mM36Q-zIahRC9R_kDMQ0spSeex6Wg2rSntT4A-tLJyQ0l66cuyOo4_r7uaLaS5kMyU1R4vnLRFJ6eAGhSawRWTFmsM1p6meSRk5VwCK2DpPvYoR3xP5Y0pyjuUZEUu651c2GQ7lG3AcRz0hA' },
+  { name: 'ALIA ANKLE BOOTS', price: 1200, category: 'accessories', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZHUkS6MKX7lu7pepH6t2okts6J-olqBwFPQ1NZKLjZ9sRuJFw1N9idrs3VWze5pGdQ2WoeqHQUnB-KNL3-vk8OLInr4DHlS3Vv0sw-n3BKad4DwLHXAr81oPvm5g7CjdLu9nnfgvrvk_m2ixts5x2PtGeuVG90ioQGeiqm9hODu5asg0cGz9THWgNxDQYhgUBt8P9Lh4Dd8KFn36kT3_s1hVFSVcAqu69gaHPFivBviAS3jmKYyN7HRVZEHNuTsafIQjOr18eRjeXOw' }
+];
+
+function handleSearch(event) {
+  if (event.key === 'Enter') {
+    performSearch();
+  }
+}
+
+function performSearch() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const resultsContainer = document.getElementById('searchResults');
+  
+  if (query === '') {
+    resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">Type to search products...</p>';
+    return;
+  }
+  
+  const filteredProducts = products.filter(product => {
+    const matchesQuery = product.name.toLowerCase().includes(query);
+    const matchesCategory = searchCategory === 'all' || product.category === searchCategory;
+    return matchesQuery && matchesCategory;
+  });
+  
+  if (filteredProducts.length === 0) {
+    resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">No products found</p>';
+  } else {
+    let html = '';
+    filteredProducts.forEach(product => {
+      html += '<div class="flex items-center gap-4 p-3 hover:bg-gray-100 rounded-lg cursor-pointer" onclick="addToCart(\'' + product.name + '\', ' + product.price + '); closeSearch();">';
+      html += '<img src="' + product.image + '" alt="' + product.name + '" class="w-12 h-12 object-cover rounded-lg">';
+      html += '<div class="flex-1"><p class="text-sm font-bold">' + product.name + '</p><p class="text-xs text-gray-500">$' + product.price + '</p></div>';
+      html += '<button class="px-3 py-1 bg-black text-white rounded-full text-xs">ADD</button>';
+      html += '</div>';
+    });
+    resultsContainer.innerHTML = html;
+  }
+}
+
+function filterSearch(category) {
+  searchCategory = category;
+  
+  const buttons = document.querySelectorAll('#searchModal .flex.gap-2 button');
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-black', 'text-white');
+    btn.classList.add('border', 'border-gray-200');
+  });
+  
+  const activeBtn = document.getElementById('search-' + category);
+  activeBtn.classList.add('bg-black', 'text-white');
+  activeBtn.classList.remove('border', 'border-gray-200');
+  
+  performSearch();
+}
+
+let currentSlide = 0;
+const slides = [
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuCQkPWIrwgahIh9yAGgqTXa7Atw8qgPFEIK1ThMzSmvAMOZEDepK58EfX9E6M181ohIn7xyimHmOHqMg295-SRFUgSDjn8qNOWTNSa64WJxEO-nUHju7DDgRltK4Lv5ej5APw223mbUhtp-PPyTCztDiVP_AH3YY4sEQglZlrr437NTIzN-tr_3oXF-SWw6MJ2kf3uhG3kUO5D7UKJ84Ibw7jW-t3vn-kf1b2ONY2M1GhwfjmWVT2fOFKDUrREfj_ckBYLSVepfduIX8A',
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuC_A3D0X-ja6k6bFf-RUILUqm7PRcKWXMnqml100bsFQgg8NP8V9YWEyUFT_v938l0Lo7Y8X7jQ6tZvUbpoWYciyxkMnpxEi6IH8SNMQdBQTdKkSpbTF-kNANYKyFVtsm79CV8sAfRAgd7Sx7vNZdC80awCAGcMaQ6TzPN0GasQzo-pcfiqq0vzFecKbo4ybtYVeztxeUmtywoENwcqpqkESoZ_5OreTG8r0WVr0gdd_9d0pjSssX9Rg7vsd4Bhn2VgjpNrdFuR5ywIDQ',
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuDpwMCsFFEKMKYQAkHCZffErfm-6xYbdEI11KW6AAMYrxtj8_DxdxiqUAUaf5yncechmlLUEbbLdQ2ybaVT8KfgqbjbNQCPmH_M_jynX5iset7U08ik1xa370w1OSZTp9mM36Q-zIahRC9R_kDMQ0spSeex6Wg2rSntT4A-tLJyQ0l66cuyOo4_r7uaLaS5kMyU1R4vnLRFJ6eAGhSawRWTFmsM1p6meSRk5VwCK2DpPvYoR3xP5Y0pyjuUZEUu651c2GQ7lG3AcRz0hA'
+];
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  updateSlide();
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlide();
+}
+
+function updateSlide() {
+  const slideImage = document.querySelector('.bg-juno-gray.rounded-\\[40px\\] img');
+  if (slideImage) {
+    slideImage.src = slides[currentSlide];
+  }
+}
+
+function playVideo() {
+  alert('Video player coming soon!');
+}
+
+function filterProducts(category) {
+  const buttons = document.querySelectorAll('.flex.gap-2 button');
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-black', 'text-white');
+    btn.classList.add('border', 'border-gray-200');
+  });
+  
+  const activeBtn = document.getElementById('btn-' + (category === 'all' ? 'all' : category === 'new' ? 'new' : category === 'best' ? 'best' : 'rec'));
+  activeBtn.classList.add('bg-black', 'text-white');
+  activeBtn.classList.remove('border', 'border-gray-200');
+  
+  const cards = document.querySelectorAll('[data-purpose="product-card"]');
+  cards.forEach(card => {
+    if (category === 'all') {
+      card.style.display = 'block';
+    } else {
+      if (card.dataset.category === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    }
+  });
+}
+
+// Close modals when clicking outside
+document.getElementById('searchModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSearch();
+});
+document.getElementById('notificationModal').addEventListener('click', function(e) {
+  if (e.target === this) closeNotifications();
+});
+document.getElementById('cartModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCart();
+});
+</script>
+</body></html>

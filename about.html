@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JONO - About Us</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'juno-brown': '#978877',
+          'juno-gray': '#F5F5F5',
+          'juno-black': '#101010',
+          'juno-white': '#FFFFFF',
+        },
+        fontFamily: {
+          'satoshi': ['Satoshi', 'Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('https://cdn.fontshare.com/wf/TTX2Z3BF3S6YOR6SK6J7Z5SZGYBCU7VY/7W6S3XCH3W6S3XCH3W6S3XCH.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  body {
+    font-family: 'Satoshi', sans-serif;
+    background-color: #ffffff;
+    color: #101010;
+  }
+  .container-custom {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .nav-link {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .btn-outline {
+    border: 1px solid #101010;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    transition: all 0.3s ease;
+  }
+  .btn-outline:hover {
+    background-color: #101010;
+    color: #ffffff;
+  }
+  @keyframes wave {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .wave-bg-about {
+    background: linear-gradient(-45deg, #E8E0D8, #D4C4B0, #C9B8A5, #E8E0D8, #D9CFC5);
+    background-size: 400% 400%;
+    animation: wave 8s ease infinite;
+  }
+</style>
+</head>
+<body class="bg-white">
+<!-- Navigation -->
+<header class="w-full bg-white py-6">
+<div class="container-custom flex items-center justify-between">
+<nav class="flex items-center space-x-6">
+<a class="nav-link" href="code.html">HOME</a>
+<a href="collection.html" class="nav-link flex items-center">SHOP <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></a>
+<a class="nav-link" href="about.html">ABOUT</a>
+<a class="nav-link" href="contact.html">CONTACT</a>
+</nav>
+<a href="code.html" class="text-2xl font-bold tracking-widest flex items-center gap-2">
+<span class="flex items-center justify-center border border-black rounded-full w-6 h-6 text-[10px]">J</span>
+        JONO
+      </a>
+<div class="flex items-center space-x-6">
+<button onclick="openSearch()" aria-label="Search" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button onclick="openNotifications()" aria-label="Notifications" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
+<button onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+          MY CART <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+<img alt="Profile" class="w-full h-full object-cover" src="pictures/download (1).jpg">
+</div>
+</div>
+</div>
+</header>
+
+<!-- About Hero -->
+<section class="container-custom py-12">
+<div class="wave-bg-about rounded-[40px] p-16 text-center">
+<p class="text-sm text-gray-500 uppercase tracking-widest mb-2">Our Story</p>
+<h1 class="text-5xl font-bold uppercase tracking-tight mb-4">ABOUT JONO</h1>
+<p class="text-gray-600 max-w-xl mx-auto">We're passionate about bringing you the latest fashion trends with quality and style.</p>
+</div>
+</section>
+
+<!-- About Content -->
+<section class="container-custom py-16">
+<div class="grid grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-3xl font-bold uppercase mb-6">WHO WE ARE</h2>
+<p class="text-gray-600 mb-4">JONO is a modern fashion brand dedicated to creating high-quality, stylish clothing for the contemporary individual. Our mission is to help you express your unique style through carefully curated collections.</p>
+<p class="text-gray-600 mb-6">Founded with a passion for fashion and attention to detail, we work with the finest materials and designers to bring you pieces that are both timeless and on-trend.</p>
+<a href="collection.html" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+          SHOP NOW <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</a>
+</div>
+<div class="bg-juno-gray rounded-3xl overflow-hidden aspect-square">
+<img alt="About JONO" class="w-full h-full object-cover" src="pictures/download (5).jpg">
+</div>
+</div>
+</section>
+
+<!-- Values -->
+<section class="container-custom py-16 bg-juno-gray rounded-[40px] mx-8">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold uppercase">OUR VALUES</h2>
+</div>
+<div class="grid grid-cols-3 gap-8 px-12 pb-12">
+<div class="text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="font-bold uppercase mb-2">QUALITY</h3>
+<p class="text-sm text-gray-600">Premium materials and craftsmanship in every piece.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="font-bold uppercase mb-2">PASSION</h3>
+<p class="text-sm text-gray-600">Driven by our love for fashion and design.</p>
+</div>
+<div class="text-center">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<h3 class="font-bold uppercase mb-2">INNOVATION</h3>
+<p class="text-sm text-gray-600">Always evolving with the latest trends and styles.</p>
+</div>
+</div>
+</section>
+
+<!-- Address -->
+<section class="container-custom py-12">
+<div class="bg-juno-gray rounded-3xl p-12 text-center">
+<h2 class="text-2xl font-bold uppercase mb-4">VISIT US</h2>
+<p class="text-gray-600 mb-2">1c Markt St, Ebutte Metta</p>
+<p class="text-gray-600">Lagos 101245, Nigeria</p>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-juno-black text-white relative mt-20 pt-24 pb-12 overflow-hidden">
+<div class="absolute bottom-0 left-1/2 -translate-x-1/2 pointer-events-none opacity-10 select-none">
+<span class="text-[25vw] font-bold leading-none tracking-tighter">JONO</span>
+</div>
+<div class="container-custom relative z-10">
+<div class="grid grid-cols-4 gap-12 border-t border-white/10 pt-16">
+<div>
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">GENERAL</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-juno-brown transition-colors" href="about.html">About Us</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Blog</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">How It Works</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">PRODUCTS</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-juno-brown transition-colors" href="#">Man Fashion</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Woman Fashion</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Shoes & Bag</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Accessories</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">CUSTOMER SERVICE</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-juno-brown transition-colors" href="#">FAQ</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Help & Support</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Billing Cycle</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-xs font-bold mb-6 text-white/50 uppercase tracking-widest">SOCIAL MEDIA</h5>
+<ul class="space-y-3 text-sm">
+<li><a class="hover:text-juno-brown transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Tiktok</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Facebook</a></li>
+<li><a class="hover:text-juno-brown transition-colors" href="#">Youtube</a></li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- Search Modal -->
+<div id="searchModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-2xl mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">Search</h3>
+<button onclick="closeSearch()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="flex gap-2 mb-4">
+<input type="text" id="searchInput" class="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-black" placeholder="Search for products..." onkeyup="handleSearch(event)">
+<button onclick="performSearch()" class="px-6 py-3 bg-black text-white rounded-lg font-bold">SEARCH</button>
+</div>
+<div class="flex gap-2 mb-4">
+<button onclick="filterSearch('all')" id="search-all" class="px-4 py-2 bg-black text-white rounded-full text-xs">ALL</button>
+<button onclick="filterSearch('women')" id="search-women" class="px-4 py-2 border border-gray-200 rounded-full text-xs">WOMEN</button>
+<button onclick="filterSearch('men')" id="search-men" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MEN</button>
+<button onclick="filterSearch('accessories')" id="search-accessories" class="px-4 py-2 border border-gray-200 rounded-full text-xs">ACCESSORIES</button>
+</div>
+<div id="searchResults" class="max-h-64 overflow-y-auto"></div>
+</div>
+</div>
+
+<!-- Notification Modal -->
+<div id="notificationModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-md mx-4">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">Notifications</h3>
+<button onclick="closeNotifications()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">New Collection Available!</p>
+<p class="text-xs text-gray-500">Check out our latest arrivals</p>
+</div>
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">50% Off Sale</p>
+<p class="text-xs text-gray-500">Limited time offer on selected items</p>
+</div>
+<div class="p-4 bg-juno-gray rounded-xl">
+<p class="text-sm font-bold">Order Shipped</p>
+<p class="text-xs text-gray-500">Your order is on the way</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Cart Modal -->
+<div id="cartModal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center">
+<div class="bg-white rounded-2xl p-8 w-full max-w-md mx-4 max-h-[80vh] overflow-y-auto">
+<div class="flex justify-between items-center mb-6">
+<h3 class="text-xl font-bold uppercase">My Cart</h3>
+<button onclick="closeCart()" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-100">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</div>
+<div id="cartItems" class="space-y-4">
+<p class="text-gray-500 text-center py-8">Your cart is empty</p>
+</div>
+<div id="cartTotal" class="border-t mt-4 pt-4 hidden">
+<div class="flex justify-between font-bold">
+<span>Total:</span>
+<span id="totalAmount">$0</span>
+</div>
+<button onclick="checkout()" class="w-full mt-4 py-3 bg-black text-white rounded-full font-bold hover:bg-gray-800 transition-colors">CHECKOUT</button>
+</div>
+</div>
+</div>
+
+<script>
+let cart = [];
+
+function openSearch() {
+  document.getElementById('searchModal').classList.remove('hidden');
+  document.getElementById('searchModal').classList.add('flex');
+  document.getElementById('searchInput').focus();
+}
+
+function closeSearch() {
+  document.getElementById('searchModal').classList.add('hidden');
+  document.getElementById('searchModal').classList.remove('flex');
+}
+
+function openNotifications() {
+  document.getElementById('notificationModal').classList.remove('hidden');
+  document.getElementById('notificationModal').classList.add('flex');
+}
+
+function closeNotifications() {
+  document.getElementById('notificationModal').classList.add('hidden');
+  document.getElementById('notificationModal').classList.remove('flex');
+}
+
+function openCart() {
+  document.getElementById('cartModal').classList.remove('hidden');
+  document.getElementById('cartModal').classList.add('flex');
+  updateCartDisplay();
+}
+
+function closeCart() {
+  document.getElementById('cartModal').classList.add('hidden');
+  document.getElementById('cartModal').classList.remove('flex');
+}
+
+function updateCartDisplay() {
+  const cartItems = document.getElementById('cartItems');
+  const cartTotal = document.getElementById('cartTotal');
+  const totalAmount = document.getElementById('totalAmount');
+  
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
+    cartTotal.classList.add('hidden');
+  } else {
+    let html = '';
+    let total = 0;
+    cart.forEach((item, index) => {
+      total += item.price;
+      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">$' + item.price + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
+    });
+    cartItems.innerHTML = html;
+    totalAmount.textContent = '$' + total;
+    cartTotal.classList.remove('hidden');
+  }
+}
+
+function addToCart(name, price) {
+  cart.push({ name, price });
+  updateCartCount();
+  alert(name + ' added to cart!');
+}
+
+function toggleWishlist(name) {
+  alert(name + ' added to wishlist!');
+}
+
+function quickView(name) {
+  alert('Quick view: ' + name);
+}
+
+function checkout() {
+  if (cart.length === 0) {
+    alert('Your cart is empty!');
+  } else {
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    alert('Proceeding to checkout! Total: $' + total + '\nThank you for shopping with JONO!');
+    cart = [];
+    updateCartCount();
+    updateCartDisplay();
+    closeCart();
+  }
+}
+
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  updateCartCount();
+  updateCartDisplay();
+}
+
+function updateCartCount() {
+  const cartBtn = document.querySelector('.btn-outline');
+  cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
+}
+
+let searchCategory = 'all';
+
+const products = [
+  { name: 'TRADITIONAL OUTFIT', price: 450, category: 'women', image: 'pictures/your igbo bride.jpg' },
+  { name: 'YORUBA WOMAN IN ASOOKE', price: 380, category: 'women', image: 'pictures/Yoruba Woman in Asooke.jpg' },
+  { name: 'IGBO BRIDE OUTFIT', price: 520, category: 'women', image: 'pictures/Igbo bride, isiagu igbo wedding dress, Igbo traditional marriage attire, Igbo cultural outfit, Igbo wedding, Igbo Isiagu cultural wedding.jpg' },
+  { name: 'FASHION DESIGN PIECE', price: 180, category: 'accessories', image: 'pictures/Outfit & Fashion Design Hashtags  #FashionDesign….jpg' },
+  { name: 'MEN FASHION PIECE', price: 220, category: 'men', image: 'pictures/download (1).jpg' },
+  { name: 'WOMEN FASHION PIECE', price: 195, category: 'women', image: 'pictures/download (2).jpg' },
+  { name: 'DESIGNER WEAR', price: 275, category: 'women', image: 'pictures/download (3).jpg' },
+  { name: 'STYLE ACCESSORY', price: 145, category: 'accessories', image: 'pictures/download (4).jpg' }
+];
+
+function handleSearch(event) {
+  if (event.key === 'Enter') {
+    performSearch();
+  }
+}
+
+function performSearch() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const resultsContainer = document.getElementById('searchResults');
+  
+  if (query === '') {
+    resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">Type to search products...</p>';
+    return;
+  }
+  
+  const filteredProducts = products.filter(product => {
+    const matchesQuery = product.name.toLowerCase().includes(query);
+    const matchesCategory = searchCategory === 'all' || product.category === searchCategory;
+    return matchesQuery && matchesCategory;
+  });
+  
+  if (filteredProducts.length === 0) {
+    resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">No products found</p>';
+  } else {
+    let html = '';
+    filteredProducts.forEach(product => {
+      html += '<div class="flex items-center gap-4 p-3 hover:bg-gray-100 rounded-lg cursor-pointer" onclick="addToCart(\'' + product.name + '\', ' + product.price + '); closeSearch();">';
+      html += '<img src="' + product.image + '" alt="' + product.name + '" class="w-12 h-12 object-cover rounded-lg">';
+      html += '<div class="flex-1"><p class="text-sm font-bold">' + product.name + '</p><p class="text-xs text-gray-500">$' + product.price + '</p></div>';
+      html += '<button class="px-3 py-1 bg-black text-white rounded-full text-xs">ADD</button>';
+      html += '</div>';
+    });
+    resultsContainer.innerHTML = html;
+  }
+}
+
+function filterSearch(category) {
+  searchCategory = category;
+  
+  const buttons = document.querySelectorAll('#searchModal .flex.gap-2 button');
+  buttons.forEach(btn => {
+    btn.classList.remove('bg-black', 'text-white');
+    btn.classList.add('border', 'border-gray-200');
+  });
+  
+  const activeBtn = document.getElementById('search-' + category);
+  activeBtn.classList.add('bg-black', 'text-white');
+  activeBtn.classList.remove('border', 'border-gray-200');
+  
+  performSearch();
+}
+
+// Close modals when clicking outside
+document.getElementById('searchModal').addEventListener('click', function(e) {
+  if (e.target === this) closeSearch();
+});
+document.getElementById('notificationModal').addEventListener('click', function(e) {
+  if (e.target === this) closeNotifications();
+});
+document.getElementById('cartModal').addEventListener('click', function(e) {
+  if (e.target === this) closeCart();
+});
+</script>
+</body>
+</html>
