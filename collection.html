@@ -97,7 +97,7 @@
           MY CART <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
-<img alt="Profile" class="w-full h-full object-cover" src="pictures/download (1).jpg">
+<img alt="Profile" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0138.jpg">
 </div>
 </div>
 </div>
@@ -112,514 +112,53 @@
 </div>
 </section>
 
-<!-- Filter Tabs -->
+<!-- Collection Filter Tabs -->
 <section class="container-custom py-8">
 <div class="flex justify-center gap-2">
-<button onclick="filterCollection('all')" id="col-btn-all" class="px-5 py-2 text-xs bg-black text-white rounded-full">ALL</button>
-<button onclick="filterCollection('women')" id="col-btn-women" class="px-5 py-2 text-xs border border-gray-200 rounded-full">WOMEN</button>
-<button onclick="filterCollection('men')" id="col-btn-men" class="px-5 py-2 text-xs border border-gray-200 rounded-full">MEN</button>
-<button onclick="filterCollection('tshirt')" id="col-btn-tshirt" class="px-5 py-2 text-xs border border-gray-200 rounded-full">T-SHIRT</button>
-<button onclick="filterCollection('accessories')" id="col-btn-accessories" class="px-5 py-2 text-xs border border-gray-200 rounded-full">ACCESSORIES</button>
+<button onclick="filterCollection('all')" id="col-btn-all" class="px-5 py-2 text-xs bg-black text-white rounded-full uppercase">ALL</button>
+<button onclick="filterCollection('autogeles')" id="col-btn-autogeles" class="px-5 py-2 text-xs border border-gray-200 rounded-full uppercase">AUTOGELES</button>
+<button onclick="filterCollection('rawsilk')" id="col-btn-rawsilk" class="px-5 py-2 text-xs border border-gray-200 rounded-full uppercase">RAW SILK MATERIALS</button>
 </div>
 </section>
 
 <!-- Collection Grid -->
 <section class="container-custom py-8">
 <div class="grid grid-cols-4 gap-6">
-<!-- Product 1 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
-<img alt="Traditional Outfit" class="w-full h-full object-cover" src="pictures/your igbo bride.jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Traditional Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Traditional Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Traditional Outfit', 450)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">TRADITIONAL OUTFIT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$450</span>
-</div>
-</div>
-
-<!-- Product 2 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Yoruba Woman" class="w-full h-full object-cover" src="pictures/Yoruba Woman in Asooke.jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Yoruba Woman in Asooke')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Yoruba Woman in Asooke')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Yoruba Woman in Asooke', 380)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">YORUBA WOMAN IN ASOOKE</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$380</span>
-</div>
-</div>
-
-<!-- Product 3 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
-<img alt="Igbo Bride" class="w-full h-full object-cover" src="pictures/Igbo bride, isiagu igbo wedding dress, Igbo traditional marriage attire, Igbo cultural outfit, Igbo wedding, Igbo Isiagu cultural wedding.jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Igbo Bride Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Igbo Bride Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Igbo Bride Outfit', 520)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">IGBO BRIDE OUTFIT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$520</span>
-</div>
-</div>
-
-<!-- Product 4 -->
-<div data-collection="accessories" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Fashion Design" class="w-full h-full object-cover" src="pictures/Outfit & Fashion Design Hashtags  #FashionDesign….jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Fashion Design Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Fashion Design Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Fashion Design Piece', 180)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">FASHION DESIGN PIECE</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Accessories</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$180</span>
-</div>
-</div>
-
-<!-- Product 5 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Clothes Photography" class="w-full h-full object-cover" src="pictures/download (1).jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Men Fashion Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Men Fashion Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Men Fashion Piece', 220)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">MEN FASHION PIECE</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$220</span>
-</div>
-</div>
-
-<!-- Product 6 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Clothes Dummy" class="w-full h-full object-cover" src="pictures/download (2).jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Women Fashion Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Women Fashion Piece')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Women Fashion Piece', 195)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">WOMEN FASHION PIECE</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$195</span>
-</div>
-</div>
-
-<!-- Product 7 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
-<img alt="Clothes Photography" class="w-full h-full object-cover" src="pictures/download (3).jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Designer Wear')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Designer Wear')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Designer Wear', 275)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">DESIGNER WEAR</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$275</span>
-</div>
-</div>
-
-<!-- Product 8 -->
-<div data-collection="accessories" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Clothes Photography" class="w-full h-full object-cover" src="pictures/download (4).jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Style Accessory')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Style Accessory')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Style Accessory', 145)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">STYLE ACCESSORY</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Accessories</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$145</span>
-</div>
-</div>
-
-<!-- Product 9 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
-<img alt="Men's Outfit" class="w-full h-full object-cover" src="pictures/Outfit for men.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Men Traditional Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Men Traditional Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Men Traditional Outfit', 320)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">MEN TRADITIONAL OUTFIT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$320</span>
-</div>
-</div>
-
-<!-- Product 10 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Isi Agu Top" class="w-full h-full object-cover" src="pictures/African Isi Agu top_ Igbo shirt_ Men's body suit_ Nigeria Shirt_ Aftican men's top_.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Isi Agu Top')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Isi Agu Top')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Isi Agu Top', 280)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">ISI AGU TOP</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$280</span>
-</div>
-</div>
-
-<!-- Product 11 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
-<img alt="Igbo Groom" class="w-full h-full object-cover" src="pictures/Igbo Groom with Handfan.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Igbo Groom Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Igbo Groom Outfit')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Igbo Groom Outfit', 450)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">IGBO GROOM OUTFIT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$450</span>
-</div>
-</div>
-
-<!-- Product 12 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Groom Isi Agu" class="w-full h-full object-cover" src="pictures/Igbo groom outfit (isi agu).jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Isi Agu Groom')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Isi Agu Groom')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Isi Agu Groom', 500)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">ISI AGU GROOM</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$500</span>
-</div>
-</div>
-
-<!-- Product 13 -->
-<div data-collection="men" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="ASCOT Polo" class="w-full h-full object-cover" src="pictures/ASCOT Knit Polo - Tan _ XL.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('ASCOT Knit Polo')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('ASCOT Knit Polo')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('ASCOT Knit Polo', 85)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">ASCOT KNIT POLO</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Men</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$85</span>
-</div>
-</div>
-
-<!-- Product 14 -->
-<div data-collection="tshirt" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
-<img alt="Graphic T-Shirt" class="w-full h-full object-cover" src="pictures/Killie T-Shirt.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Killie T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Killie T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Killie T-Shirt', 35)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">KILLIE T-SHIRT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">T-Shirt</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$35</span>
-</div>
-</div>
-
-<!-- Product 15 -->
-<div data-collection="tshirt" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Script Logo T-Shirt" class="w-full h-full object-cover" src="pictures/Men's T-Shirt, Classic Graphic T-Shirt, Soft And Comfortable T-Shirts For Men, Script Logo, 180g, 100% Cotton.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Script Logo T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Script Logo T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Script Logo T-Shirt', 40)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">SCRIPT LOGO T-SHIRT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">T-Shirt</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$40</span>
-</div>
-</div>
-
-<!-- Product 16 -->
-<div data-collection="tshirt" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Cartoon T-Shirt" class="w-full h-full object-cover" src="pictures/Men Loose Funny Cartoon & Slogan Graphic Drop Shoulder Short Sleeve Tee, For Going Out, For Friends.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Cartoon Graphic T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Cartoon Graphic T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Cartoon Graphic T-Shirt', 30)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">CARTOON GRAPHIC TEE</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">T-Shirt</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$30</span>
-</div>
-</div>
-
-<!-- Product 17 -->
-<div data-collection="tshirt" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-red-500 text-white text-[10px] font-bold px-2 py-1 rounded">HOT</span>
-<img alt="Unisex T-Shirt" class="w-full h-full object-cover" src="pictures/Be Kind (Unisex Oversized Classic T-Shirt)  [….jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Be Kind T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Be Kind T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Be Kind T-Shirt', 45)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">BE KIND UNISEX T-SHIRT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">T-Shirt</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$45</span>
-</div>
-</div>
-
-<!-- Product 18 -->
-<div data-collection="tshirt" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Anime T-Shirt" class="w-full h-full object-cover" src="pictures/Anime Girl Dinner Print Washed T-Shirt - 10 _ S.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Anime Washed T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Anime Washed T-Shirt')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Anime Washed T-Shirt', 50)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">ANIME WASHED T-SHIRT</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">T-Shirt</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$50</span>
-</div>
-</div>
-
-<!-- Product 19 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<span class="absolute top-3 left-3 bg-green-600 text-white text-[10px] font-bold px-2 py-1 rounded">NEW</span>
-<img alt="Tradition Meets Power" class="w-full h-full object-cover" src="pictures/Traition meets power—effortless and timeless_ 🔥.jpeg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Tradition Meets Power')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Tradition Meets Power')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Tradition Meets Power', 350)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">TRADITION MEETS POWER</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$350</span>
-</div>
-</div>
-
-<!-- Product 20 -->
-<div data-collection="women" class="group">
-<div class="bg-juno-gray rounded-2xl overflow-hidden aspect-[3/4] mb-4 relative">
-<img alt="Igbo Bride Trad" class="w-full h-full object-cover" src="pictures/your igbo bride (3).jpg">
-<div class="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
-<div class="absolute bottom-3 left-0 right-0 flex justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-<button onclick="toggleWishlist('Igbo Bride Tradition')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="quickView('Igbo Bride Tradition')" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-<button onclick="addToCart('Igbo Bride Tradition', 550)" class="w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</button>
-</div>
-</div>
-<h3 class="text-sm font-bold mb-1">IGBO BRIDE TRADITION</h3>
-<p class="text-[10px] text-gray-400 uppercase mb-1">Women</p>
-<div class="flex items-center gap-2">
-<span class="text-sm font-bold">$550</span>
-</div>
-</div>
-</div>
-
-<!-- See More -->
-<div class="mt-12 text-center">
-<a href="collection.html" class="btn-outline flex items-center gap-2 mx-auto inline-flex">
-        SEE MORE <svg class="w-4 h-4 rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</a>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0138.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0139.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0140.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0141.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0142.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0143.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0144.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0145.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0146.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0147.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0148.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0149.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0150.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0151.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0153.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0164.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0188.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0200.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0203.jpg"></div>
+<div data-collection="autogeles" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Autogeles" class="w-full h-full object-cover" src="pictures/autogeles/IMG-20261014-WA0214.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0123.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0124.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0125.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0126.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0127.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0128.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0129.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0130.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0131.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0132.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0133.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0134.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0135.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0136.jpg"></div>
+<div data-collection="rawsilk" class="bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4]"><img alt="Raw Silk Material" class="w-full h-full object-cover" src="pictures/awa/IMG-20261014-WA0137.jpg"></div>
 </div>
 </section>
 
@@ -780,7 +319,7 @@ function updateCartDisplay() {
   const cartItems = document.getElementById('cartItems');
   const cartTotal = document.getElementById('cartTotal');
   const totalAmount = document.getElementById('totalAmount');
-  
+
   if (cart.length === 0) {
     cartItems.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is empty</p>';
     cartTotal.classList.add('hidden');
@@ -832,32 +371,16 @@ function removeFromCart(index) {
 
 function updateCartCount() {
   const cartBtn = document.querySelector('.btn-outline');
-  cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
+  if (cartBtn) {
+    cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
+  }
 }
 
 let searchCategory = 'all';
 
 const products = [
-  { name: 'TRADITIONAL OUTFIT', price: 450, category: 'women', image: 'pictures/your igbo bride.jpg' },
-  { name: 'YORUBA WOMAN IN ASOOKE', price: 380, category: 'women', image: 'pictures/Yoruba Woman in Asooke.jpg' },
-  { name: 'IGBO BRIDE OUTFIT', price: 520, category: 'women', image: 'pictures/Igbo bride, isiagu igbo wedding dress, Igbo traditional marriage attire, Igbo cultural outfit, Igbo wedding, Igbo Isiagu cultural wedding.jpg' },
-  { name: 'FASHION DESIGN PIECE', price: 180, category: 'accessories', image: 'pictures/Outfit & Fashion Design Hashtags  #FashionDesign….jpg' },
-  { name: 'MEN FASHION PIECE', price: 220, category: 'men', image: 'pictures/download (1).jpg' },
-  { name: 'WOMEN FASHION PIECE', price: 195, category: 'women', image: 'pictures/download (2).jpg' },
-  { name: 'DESIGNER WEAR', price: 275, category: 'women', image: 'pictures/download (3).jpg' },
-  { name: 'STYLE ACCESSORY', price: 145, category: 'accessories', image: 'pictures/download (4).jpg' },
-  { name: 'MEN TRADITIONAL OUTFIT', price: 320, category: 'men', image: 'pictures/Outfit for men.jpeg' },
-  { name: 'ISI AGU TOP', price: 280, category: 'men', image: 'pictures/African Isi Agu top_ Igbo shirt_ Men\'s body suit_ Nigeria Shirt_ Aftican men\'s top_.jpeg' },
-  { name: 'IGBO GROOM OUTFIT', price: 450, category: 'men', image: 'pictures/Igbo Groom with Handfan.jpeg' },
-  { name: 'ISI AGU GROOM', price: 500, category: 'men', image: 'pictures/Igbo groom outfit (isi agu).jpeg' },
-  { name: 'ASCOT KNIT POLO', price: 85, category: 'men', image: 'pictures/ASCOT Knit Polo - Tan _ XL.jpeg' },
-  { name: 'KILLIE T-SHIRT', price: 35, category: 'tshirt', image: 'pictures/Killie T-Shirt.jpeg' },
-  { name: 'SCRIPT LOGO T-SHIRT', price: 40, category: 'tshirt', image: 'pictures/Men\'s T-Shirt, Classic Graphic T-Shirt, Soft And Comfortable T-Shirts For Men, Script Logo, 180g, 100% Cotton.jpeg' },
-  { name: 'CARTOON GRAPHIC TEE', price: 30, category: 'tshirt', image: 'pictures/Men Loose Funny Cartoon & Slogan Graphic Drop Shoulder Short Sleeve Tee, For Going Out, For Friends.jpeg' },
-  { name: 'BE KIND UNISEX T-SHIRT', price: 45, category: 'tshirt', image: 'pictures/Be Kind (Unisex Oversized Classic T-Shirt)  [….jpeg' },
-  { name: 'ANIME WASHED T-SHIRT', price: 50, category: 'tshirt', image: 'pictures/Anime Girl Dinner Print Washed T-Shirt - 10 _ S.jpeg' },
-  { name: 'TRADITION MEETS POWER', price: 350, category: 'women', image: 'pictures/Traition meets power—effortless and timeless_ 🔥.jpeg' },
-  { name: 'IGBO BRIDE TRADITION', price: 550, category: 'women', image: 'pictures/your igbo bride (3).jpg' }
+  { name: 'AUTOGELES', price: 0, category: 'autogeles', image: 'pictures/autogeles/IMG-20261014-WA0138.jpg' },
+  { name: 'RAW SILK MATERIAL', price: 0, category: 'rawsilk', image: 'pictures/awa/IMG-20261014-WA0123.jpg' }
 ];
 
 function handleSearch(event) {
@@ -869,18 +392,18 @@ function handleSearch(event) {
 function performSearch() {
   const query = document.getElementById('searchInput').value.toLowerCase().trim();
   const resultsContainer = document.getElementById('searchResults');
-  
+
   if (query === '') {
     resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">Type to search products...</p>';
     return;
   }
-  
+
   const filteredProducts = products.filter(product => {
     const matchesQuery = product.name.toLowerCase().includes(query);
     const matchesCategory = searchCategory === 'all' || product.category === searchCategory;
     return matchesQuery && matchesCategory;
   });
-  
+
   if (filteredProducts.length === 0) {
     resultsContainer.innerHTML = '<p class="text-gray-500 text-center py-4">No products found</p>';
   } else {
@@ -898,41 +421,41 @@ function performSearch() {
 
 function filterSearch(category) {
   searchCategory = category;
-  
+
   const buttons = document.querySelectorAll('#searchModal .flex.gap-2 button');
   buttons.forEach(btn => {
     btn.classList.remove('bg-black', 'text-white');
     btn.classList.add('border', 'border-gray-200');
   });
-  
+
   const activeBtn = document.getElementById('search-' + category);
-  activeBtn.classList.add('bg-black', 'text-white');
-  activeBtn.classList.remove('border', 'border-gray-200');
-  
+  if (activeBtn) {
+    activeBtn.classList.add('bg-black', 'text-white');
+    activeBtn.classList.remove('border', 'border-gray-200');
+  }
+
   performSearch();
 }
 
 function filterCollection(category) {
-  const buttons = document.querySelectorAll('.flex.gap-2 button');
+  const buttons = document.querySelectorAll('section .flex.justify-center.gap-2 button');
   buttons.forEach(btn => {
     btn.classList.remove('bg-black', 'text-white');
     btn.classList.add('border', 'border-gray-200');
   });
-  
+
   const activeBtn = document.getElementById('col-btn-' + category);
-  activeBtn.classList.add('bg-black', 'text-white');
-  activeBtn.classList.remove('border', 'border-gray-200');
-  
+  if (activeBtn) {
+    activeBtn.classList.add('bg-black', 'text-white');
+    activeBtn.classList.remove('border', 'border-gray-200');
+  }
+
   const cards = document.querySelectorAll('[data-collection]');
   cards.forEach(card => {
-    if (category === 'all') {
-      card.style.display = 'block';
+    if (category === 'all' || card.dataset.collection === category) {
+      card.style.display = '';
     } else {
-      if (card.dataset.collection === category) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
+      card.style.display = 'none';
     }
   });
 }
