@@ -86,7 +86,7 @@
 <div class="flex items-center space-x-6">
 <button onclick="openSearch()" aria-label="Search" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
 <button onclick="openNotifications()" aria-label="Notifications" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
-<button onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+<button id="cartCount" onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
           MY CART <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
@@ -222,11 +222,16 @@
 <input type="text" id="searchInput" class="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-black" placeholder="Search for products..." onkeyup="handleSearch(event)">
 <button onclick="performSearch()" class="px-6 py-3 bg-black text-white rounded-lg font-bold">SEARCH</button>
 </div>
-<div class="flex gap-2 mb-4">
+<div class="flex flex-wrap gap-2 mb-4">
 <button onclick="filterSearch('all')" id="search-all" class="px-4 py-2 bg-black text-white rounded-full text-xs">ALL</button>
-<button onclick="filterSearch('women')" id="search-women" class="px-4 py-2 border border-gray-200 rounded-full text-xs">WOMEN</button>
-<button onclick="filterSearch('men')" id="search-men" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MEN</button>
-<button onclick="filterSearch('accessories')" id="search-accessories" class="px-4 py-2 border border-gray-200 rounded-full text-xs">ACCESSORIES</button>
+<button onclick="filterSearch('autogeles')" id="search-autogeles" class="px-4 py-2 border border-gray-200 rounded-full text-xs">AUTOGELES</button>
+<button onclick="filterSearch('rawsilk')" id="search-rawsilk" class="px-4 py-2 border border-gray-200 rounded-full text-xs">RAW SILK</button>
+<button onclick="filterSearch('crepe')" id="search-crepe" class="px-4 py-2 border border-gray-200 rounded-full text-xs">CREPE</button>
+<button onclick="filterSearch('striped')" id="search-striped" class="px-4 py-2 border border-gray-200 rounded-full text-xs">STRIPED CREPE</button>
+<button onclick="filterSearch('milkado')" id="search-milkado" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MILKADO</button>
+<button onclick="filterSearch('clothes')" id="search-clothes" class="px-4 py-2 border border-gray-200 rounded-full text-xs">CLOTHES</button>
+<button onclick="filterSearch('gowns')" id="search-gowns" class="px-4 py-2 border border-gray-200 rounded-full text-xs">GOWNS</button>
+<button onclick="filterSearch('turbans')" id="search-turbans" class="px-4 py-2 border border-gray-200 rounded-full text-xs">TURBANS</button>
 </div>
 <div id="searchResults" class="max-h-64 overflow-y-auto"></div>
 </div>
@@ -280,6 +285,7 @@
 </div>
 </div>
 
+<script src="catalog.js"></script>
 <script>
 let cart = [];
 
@@ -328,7 +334,7 @@ function updateCartDisplay() {
     let total = 0;
     cart.forEach((item, index) => {
       total += item.price;
-      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">$' + item.price + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
+      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">' + (item.price > 0 ? '$' + item.price : 'Price on request') + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
     });
     cartItems.innerHTML = html;
     totalAmount.textContent = '$' + total;
@@ -355,7 +361,7 @@ function checkout() {
     alert('Your cart is empty!');
   } else {
     let total = cart.reduce((sum, item) => sum + item.price, 0);
-    alert('Proceeding to checkout! Total: $' + total + '\nThank you for shopping with JONO!');
+    alert('Proceeding to checkout! Total: ' + (total > 0 ? '$' + total : 'Price on request') + '\nThank you for shopping with JONO!');
     cart = [];
     updateCartCount();
     updateCartDisplay();
@@ -370,16 +376,13 @@ function removeFromCart(index) {
 }
 
 function updateCartCount() {
-  const cartBtn = document.querySelector('.btn-outline');
+  const cartBtn = document.getElementById('cartCount');
   cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
 }
 
 let searchCategory = 'all';
 
-const products = [
-  { name: 'AUTOGELES', price: 0, category: 'autogeles', image: 'pictures/autogeles/IMG-20261014-WA0138.jpg' },
-  { name: 'RAW SILK MATERIALS', price: 0, category: 'rawsilk', image: 'pictures/awa/IMG-20261014-WA0123.jpg' }
-];
+const products = JONO_CATALOG;
 
 function handleSearch(event) {
   if (event.key === 'Enter') {
@@ -397,7 +400,7 @@ function performSearch() {
   }
   
   const filteredProducts = products.filter(product => {
-    const matchesQuery = product.name.toLowerCase().includes(query);
+    const matchesQuery = product.name.toLowerCase().includes(query) || product.category.toLowerCase().includes(query);
     const matchesCategory = searchCategory === 'all' || product.category === searchCategory;
     return matchesQuery && matchesCategory;
   });

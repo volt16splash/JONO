@@ -84,7 +84,7 @@
 <div class="flex items-center space-x-6">
 <button onclick="openSearch()" aria-label="Search" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
 <button onclick="openNotifications()" aria-label="Notifications" class=""><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button>
-<button onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
+<button id="cartCount" onclick="openCart()" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 hover:bg-black hover:text-white transition-colors">
           MY CART <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </button>
 <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
@@ -140,93 +140,151 @@
 <button onclick="filterProducts('striped')" id="btn-striped" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">STRIPED CREPE</button>
 <button onclick="filterProducts('milkado')" id="btn-milkado" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">MILKADO</button>
 <button onclick="filterProducts('clothes')" id="btn-clothes" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">CLOTHES TO YOUR TASTE</button>
+<button onclick="filterProducts('gowns')" id="btn-gowns" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">GOWNS</button>
+<button onclick="filterProducts('turbans')" id="btn-turbans" class="px-4 py-1.5 text-xs border border-gray-200 rounded-full">TURBANS</button>
 </div>
 </div>
 <div class="grid grid-cols-3 gap-8">
-<a href="collection.html" data-purpose="product-card" data-category="autogeles" class="group block">
+<div data-purpose="product-card" data-category="autogeles" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="AUTOGELES" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/autogeles/IMG-20261014-WA0138.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">AUTOGELES</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="autogeles" class="group block">
+<button onclick="addToCart('AUTOGELES', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="autogeles" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="AUTOGELES" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/autogeles/IMG-20261014-WA0139.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">AUTOGELES</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="autogeles" class="group block">
+<button onclick="addToCart('AUTOGELES', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="autogeles" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="AUTOGELES" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/autogeles/IMG-20261014-WA0140.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">AUTOGELES</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="rawsilk" class="group block">
-<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
-<img alt="RAW SILK MATERIALS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0123.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
+<button onclick="addToCart('AUTOGELES', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
 </div>
-<h3 class="text-sm font-bold uppercase">RAW SILK MATERIALS</h3>
-</a>
-<a href="collection.html" data-purpose="product-card" data-category="rawsilk" class="group block">
+<div data-purpose="product-card" data-category="rawsilk" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
-<img alt="RAW SILK MATERIALS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0124.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
+<img alt="RAW SILK MATERIAL" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0123.jpg">
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
 </div>
-<h3 class="text-sm font-bold uppercase">RAW SILK MATERIALS</h3>
+<h3 class="text-sm font-bold uppercase">RAW SILK MATERIAL</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="rawsilk" class="group block">
+<button onclick="addToCart('RAW SILK MATERIAL', 3500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="rawsilk" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
-<img alt="RAW SILK MATERIALS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0125.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
+<img alt="RAW SILK MATERIAL" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0124.jpg">
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
 </div>
-<h3 class="text-sm font-bold uppercase">RAW SILK MATERIALS</h3>
+<h3 class="text-sm font-bold uppercase">RAW SILK MATERIAL</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="clothes" class="group block">
+<button onclick="addToCart('RAW SILK MATERIAL', 3500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="rawsilk" class="group">
+<a href="collection.html" class="block">
+<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
+<img alt="RAW SILK MATERIAL" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/awa/IMG-20261014-WA0125.jpg">
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#3500/yard</span>
+</div>
+<h3 class="text-sm font-bold uppercase">RAW SILK MATERIAL</h3>
+</a>
+<button onclick="addToCart('RAW SILK MATERIAL', 3500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="clothes" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="CLOTHES TO YOUR TASTE" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Clothes to your taste/IMG-20261014-WA0217.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">CLOTHES TO YOUR TASTE</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="clothes" class="group block">
+<button onclick="addToCart('CLOTHES TO YOUR TASTE', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="clothes" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="CLOTHES TO YOUR TASTE" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Clothes to your taste/IMG-20261014-WA0220.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">CLOTHES TO YOUR TASTE</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="clothes" class="group block">
+<button onclick="addToCart('CLOTHES TO YOUR TASTE', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="clothes" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="CLOTHES TO YOUR TASTE" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Clothes to your taste/IMG-20261014-WA0221.jpg">
 
 </div>
 <h3 class="text-sm font-bold uppercase">CLOTHES TO YOUR TASTE</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="crepe" class="group block">
-<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
-<img alt="CREPE MATERIALS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Crepe Material/84a69de7e7c46d3547b5a8221d2f5c9b.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#2500/yard</span>
+<button onclick="addToCart('CLOTHES TO YOUR TASTE', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
 </div>
-<h3 class="text-sm font-bold uppercase">CREPE MATERIALS</h3>
+<div data-purpose="product-card" data-category="crepe" class="group">
+<a href="collection.html" class="block">
+<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
+<img alt="CREPE MATERIAL" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Crepe Material/84a69de7e7c46d3547b5a8221d2f5c9b.jpg">
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#2500/yard</span>
+</div>
+<h3 class="text-sm font-bold uppercase">CREPE MATERIAL</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="striped" class="group block">
+<button onclick="addToCart('CREPE MATERIAL', 2500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="striped" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="STRIPED CREPE" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Crepe Material/striped crepe materials/IMG-20261016-WA0056.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#3500</span>
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#3500</span>
 </div>
 <h3 class="text-sm font-bold uppercase">STRIPED CREPE</h3>
 </a>
-<a href="collection.html" data-purpose="product-card" data-category="milkado" class="group block">
+<button onclick="addToCart('STRIPED CREPE', 3500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="milkado" class="group">
+<a href="collection.html" class="block">
 <div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
 <img alt="MILKADO" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/MIlkado material/Plain milkado materisl/18e75518121fe279dc47c125880fac32.jpg">
-<span class="absolute bottom-3 left-3 bg-black/80 text-white text-xs font-medium px-3 py-1 rounded-full">#2500/yard</span>
+<span class="absolute top-3 left-3 bg-white/90 text-black text-xs font-medium px-3 py-1 rounded-full">#2500/yard</span>
 </div>
 <h3 class="text-sm font-bold uppercase">MILKADO</h3>
 </a>
+<button onclick="addToCart('MILKADO', 2500)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="gowns" class="group">
+<a href="collection.html" class="block">
+<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
+<img alt="GOWNS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/gowns/34154.jpg">
+
+</div>
+<h3 class="text-sm font-bold uppercase">GOWNS</h3>
+</a>
+<button onclick="addToCart('GOWNS', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
+<div data-purpose="product-card" data-category="turbans" class="group">
+<a href="collection.html" class="block">
+<div class="relative bg-juno-gray rounded-3xl overflow-hidden aspect-[3/4] mb-4">
+<img alt="TURBANS" class="w-full h-full object-cover group-hover:scale-105 transition-transform" src="pictures/Turbans/IMG-20261017-WA0056.jpg">
+
+</div>
+<h3 class="text-sm font-bold uppercase">TURBANS</h3>
+</a>
+<button onclick="addToCart('TURBANS', 0)" class="mt-3 w-full text-[10px] font-bold border border-black rounded-full px-4 py-2 hover:bg-black hover:text-white transition-colors">ADD TO CART</button>
+</div>
 </div>
 <div class="mt-12 text-center">
 <a href="collection.html" class="px-6 py-3 border border-black text-black rounded-full inline-flex items-center gap-2 mx-auto hover:bg-black hover:text-white transition-colors">
@@ -452,11 +510,16 @@
 <input type="text" id="searchInput" class="flex-1 px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:border-black" placeholder="Search for products..." onkeyup="handleSearch(event)">
 <button onclick="performSearch()" class="px-6 py-3 bg-black text-white rounded-lg font-bold">SEARCH</button>
 </div>
-<div class="flex gap-2 mb-4">
+<div class="flex flex-wrap gap-2 mb-4">
 <button onclick="filterSearch('all')" id="search-all" class="px-4 py-2 bg-black text-white rounded-full text-xs">ALL</button>
-<button onclick="filterSearch('men')" id="search-men" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MEN</button>
-<button onclick="filterSearch('women')" id="search-women" class="px-4 py-2 border border-gray-200 rounded-full text-xs">WOMEN</button>
-<button onclick="filterSearch('accessories')" id="search-accessories" class="px-4 py-2 border border-gray-200 rounded-full text-xs">ACCESSORIES</button>
+<button onclick="filterSearch('autogeles')" id="search-autogeles" class="px-4 py-2 border border-gray-200 rounded-full text-xs">AUTOGELES</button>
+<button onclick="filterSearch('rawsilk')" id="search-rawsilk" class="px-4 py-2 border border-gray-200 rounded-full text-xs">RAW SILK</button>
+<button onclick="filterSearch('crepe')" id="search-crepe" class="px-4 py-2 border border-gray-200 rounded-full text-xs">CREPE</button>
+<button onclick="filterSearch('striped')" id="search-striped" class="px-4 py-2 border border-gray-200 rounded-full text-xs">STRIPED CREPE</button>
+<button onclick="filterSearch('milkado')" id="search-milkado" class="px-4 py-2 border border-gray-200 rounded-full text-xs">MILKADO</button>
+<button onclick="filterSearch('clothes')" id="search-clothes" class="px-4 py-2 border border-gray-200 rounded-full text-xs">CLOTHES</button>
+<button onclick="filterSearch('gowns')" id="search-gowns" class="px-4 py-2 border border-gray-200 rounded-full text-xs">GOWNS</button>
+<button onclick="filterSearch('turbans')" id="search-turbans" class="px-4 py-2 border border-gray-200 rounded-full text-xs">TURBANS</button>
 </div>
 <div id="searchResults" class="max-h-64 overflow-y-auto"></div>
 </div>
@@ -510,6 +573,7 @@
 </div>
 </div>
 
+<script src="catalog.js"></script>
 <script>
 let cart = [];
 
@@ -558,7 +622,7 @@ function updateCartDisplay() {
     let total = 0;
     cart.forEach((item, index) => {
       total += item.price;
-      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">$' + item.price + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
+      html += '<div class="flex justify-between items-center p-4 bg-juno-gray rounded-xl"><div><p class="text-sm font-bold">' + item.name + '</p><p class="text-xs text-gray-500">' + (item.price > 0 ? '$' + item.price : 'Price on request') + '</p></div><button onclick="removeFromCart(' + index + ')" class="text-red-500 text-xs">Remove</button></div>';
     });
     cartItems.innerHTML = html;
     totalAmount.textContent = '$' + total;
@@ -585,7 +649,7 @@ function checkout() {
     alert('Your cart is empty!');
   } else {
     let total = cart.reduce((sum, item) => sum + item.price, 0);
-    alert('Proceeding to checkout! Total: $' + total + '\nThank you for shopping with JONO!');
+    alert('Proceeding to checkout! Total: ' + (total > 0 ? '$' + total : 'Price on request') + '\nThank you for shopping with JONO!');
     cart = [];
     updateCartCount();
     updateCartDisplay();
@@ -600,20 +664,13 @@ function removeFromCart(index) {
 }
 
 function updateCartCount() {
-  const cartBtn = document.querySelector('.btn-outline');
+  const cartBtn = document.getElementById('cartCount');
   cartBtn.innerHTML = 'MY CART (' + cart.length + ') <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>';
 }
 
 let searchCategory = 'all';
 
-const products = [
-  { name: 'UTILITY JACKET', price: 350, category: 'new', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCc3mPo77TEIR7jigrxGpvlV1mfJN33ByMzd7BNKmZeHiUethrbMRn42rbfj1rxf8cf8HgFt3Wgn16_mKHIY9T4WC9tNqTqk96LWzbxVLHU8s2Y4J8zZK2GAt3tPkrEkVN9GP8H0TFweaUqCjtzfNROW6ne8fFbr4whglDbfeWIedhTppFDwNaM0bNZwsNE83XC3PuD8_8odrl7HOrsP2ZlD25sbVQUZ_JIy8LIqh5doI_A91w35iXjtrNaS4nVbmpOv_twakzv5N01Ww' },
-  { name: 'MIRACLE AIR SHIRT JACKET', price: 100, category: 'best', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDQtz128u-Cf8BOmSI5xTsIzavBpXmGSEVsKkTNYG42bdAz8TldKTn1NQHgh9pwP3K4pNkz8E6J5m7rbC6Lq58IX6TNZhJY_XuHKFO04cS5gKCHBb_XdEaRGzUBbdK14f4XmjymH79JMetfwneNHyadlMbICrwAQEOwmIJdQ-gXggv5IGTiXDkvtdIkmKKhfjWf2AbE8QoLmBdRwEafWdMzRVi-5UbgkVilOlNCwgbWbzMH9PkIcNeGUK97wchKc6P8droVHNgU032mYg' },
-  { name: 'TAILORED RILEX JACKET', price: 275, category: 'rec', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCTbVp6TR5MDJi6JHStMxFKQMzQ8DSggG-iJOJ79iLqf2QbliE-aVyw2HY4FzM5OMzB_2ZxbN96TYfLIw1spJRu0btwflthlBleqxYY57uDQigbYz5-CTerV4x2HzKpmJ15g6McsQ1ZFQieF6c2yxolLAejAGUOoQD902NA3Zw8u0VzZE13XK3VYMUnLF2RvjM2ea9x0FgcRwAmbKPnxura8s_ZVJQCJKua2FpVyQJgcOrgTiXDGlf4kJIU0mwEF2Wql9MtvtayjMw_zw' },
-  { name: 'SILHOUETTE PUFFER JACKET', price: 230, category: 'new', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuC_A3D0X-ja6k6bFf-RUILUqm7PRcKWXMnqml100bsFQgg8NP8V9YWEyUFT_v938l0Lo7Y8X7jQ6tZvUbpoWYciyxkMnpxEi6IH8SNMQdBQTdKkSpbTF-kNANYKyFVtsm79CV8sAfRAgd7Sx7vNZdC80awCAGcMaQ6TzPN0GasQzo-pcfiqq0vzFecKbo4ybtYVeztxeUmtywoENwcqpqkESoZ_5OreTG8r0WVr0gdd_9d0pjSssX9Rg7vsd4Bhn2VgjpNrdFuR5ywIDQ' },
-  { name: 'CRYSTAL MIDI DRESS', price: 175, category: 'women', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDpwMCsFFEKMKYQAkHCZffErfm-6xYbdEI11KW6AAMYrxtj8_DxdxiqUAUaf5yncechmlLUEbbLdQ2ybaVT8KfgqbjbNQCPmH_M_jynX5iset7U08ik1xa370w1OSZTp9mM36Q-zIahRC9R_kDMQ0spSeex6Wg2rSntT4A-tLJyQ0l66cuyOo4_r7uaLaS5kMyU1R4vnLRFJ6eAGhSawRWTFmsM1p6meSRk5VwCK2DpPvYoR3xP5Y0pyjuUZEUu651c2GQ7lG3AcRz0hA' },
-  { name: 'ALIA ANKLE BOOTS', price: 1200, category: 'accessories', image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCZHUkS6MKX7lu7pepH6t2okts6J-olqBwFPQ1NZKLjZ9sRuJFw1N9idrs3VWze5pGdQ2WoeqHQUnB-KNL3-vk8OLInr4DHlS3Vv0sw-n3BKad4DwLHXAr81oPvm5g7CjdLu9nnfgvrvk_m2ixts5x2PtGeuVG90ioQGeiqm9hODu5asg0cGz9THWgNxDQYhgUBt8P9Lh4Dd8KFn36kT3_s1hVFSVcAqu69gaHPFivBviAS3jmKYyN7HRVZEHNuTsafIQjOr18eRjeXOw' }
-];
+const products = JONO_CATALOG;
 
 function handleSearch(event) {
   if (event.key === 'Enter') {
@@ -631,7 +688,7 @@ function performSearch() {
   }
   
   const filteredProducts = products.filter(product => {
-    const matchesQuery = product.name.toLowerCase().includes(query);
+    const matchesQuery = product.name.toLowerCase().includes(query) || product.category.toLowerCase().includes(query);
     const matchesCategory = searchCategory === 'all' || product.category === searchCategory;
     return matchesQuery && matchesCategory;
   });
